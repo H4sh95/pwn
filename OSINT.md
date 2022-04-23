@@ -52,3 +52,10 @@
 
 * phoneinfoga scan -n 14082492815
 * phoneinfoga serve -p 8080
+
+## SOCIAL MEDIA OSINT
+
+### twint
+* https://github.com/twintproject/twint
+* pip3 install --upgrade -e git+https://github.com/twintproject/twint.git@origin/master#egg=twint
+* pip3 install --upgrade aiohttp_socks
