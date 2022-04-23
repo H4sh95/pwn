@@ -65,8 +65,25 @@
 	
 ## WEBSITE OSINT
 
+### Extra Tools
 * Subfinder - https://github.com/projectdiscovery/subfinder
+	* go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+	* subfinder -d target.com
 * Assetfinder - https://github.com/tomnomnom/assetfinder
+	* go install github.com/tomnomnom/assetfinder@latets
+	* assetfinder target.com
 * httprobe - https://github.com/tomnomnom/httprobe
+	* go install github.com/tomnomnom/httprobe@latets
+	* httprobe -d target.com
 * Amass - https://github.com/OWASP/Amass
+	* go install -v github.com/OWASP/Amass/v3/...@master
+	* amass enum -d target.com
 * GoWitness - https://github.com/sensepost/gowitness/wiki/Installation
+	* go install github.com/sensepost/gowitness@latest
+	* gowitness file -f ./alive.txt -P ./pics --no-http
+
+1. subfinder -d tcm-sec.com
+2. assetfinder tcm-sec.com
+3. amass enum -d tcm-sec.com
+4. cat tesla.txt | sort -u | httprobe -s -p https:443
+5. gowitness file -f ./alive.txt -P ./pics --no-http
