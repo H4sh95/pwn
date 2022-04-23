@@ -29,3 +29,11 @@
 
 ### h8mail
 * https://github.com/khast3x/h8mail
+
+## HUNTING USERNAMES AND ACCOUNTS
+
+### whatsmyname
+* https://github.com/WebBreacher/WhatsMyName
+** web_accounts_list_checker.py
+*** python3 ./web_accounts_list_checker.py -u maxim
+** check_online_presence.py
