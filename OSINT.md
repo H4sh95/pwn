@@ -20,12 +20,12 @@ sublist3r --help
 sublist3r -d target.com
 
 ### Breach-Parse
-https://github.com/hmaverickadams/breach-parse
-git-clone https://github.com/hmaverickadams/breach-parse.git
-sudo ./install.sh
- -- Download BreachDB; URL on github page --
-breach-parse
-breach-parse @gmail.com gmail.txt "~/Downloads/BreachCompilation/data"
+* https://github.com/hmaverickadams/breach-parse
+* git-clone https://github.com/hmaverickadams/breach-parse.git
+* sudo ./install.sh
+*  -- Download BreachDB; URL on github page --
+* breach-parse
+* breach-parse @gmail.com gmail.txt "~/Downloads/BreachCompilation/data"
 
 ### h8mail
 https://github.com/khast3x/h8mail
