@@ -66,7 +66,7 @@
 ## WEBSITE OSINT
 
 ### Extra Tools Using GO
-*Prepare GO environment
+* Prepare GO environment
 	* export GOPATH=$HOME/go 
 	* export GOROOT=/usr/lib/go
 	* export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
