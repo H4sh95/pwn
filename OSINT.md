@@ -33,6 +33,8 @@
 ## HUNTING USERNAMES AND ACCOUNTS
 
 ### whatsmyname
+* On traceLabs you can use the whatsmyname command direct
+	* ./whatsmyname -u maxim
 * https://github.com/WebBreacher/WhatsMyName
 * web_accounts_list_checker.py
 	* python3 ./web_accounts_list_checker.py -u maxim
