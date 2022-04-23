@@ -45,3 +45,10 @@
 ### sherlock
 * USE ON TRACELABS KALI
 	* ./sherlock username
+
+## HUNTING PHONE NUMBERS
+
+### phoneinfoga
+
+* phoneinfoga scan -n 14082492815
+* phoneinfoga serve -p 8080
