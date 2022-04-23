@@ -33,12 +33,15 @@
 ## HUNTING USERNAMES AND ACCOUNTS
 
 ### whatsmyname
-* On traceLabs you can use the whatsmyname command direct
+* USE ON TRACELABS KALI
 	* ./whatsmyname -u maxim
-* https://github.com/WebBreacher/WhatsMyName
-* web_accounts_list_checker.py
-	* python3 ./web_accounts_list_checker.py -u maxim
-* check_online_presence.py
-	* python3 check_online_presence.py -u maxim
+* OTHERWISE
+	* https://github.com/WebBreacher/WhatsMyName
+	* web_accounts_list_checker.py
+		* python3 ./web_accounts_list_checker.py -u maxim
+	* check_online_presence.py
+		* python3 check_online_presence.py -u maxim
 	
-
+### sherlock
+* USE ON TRACELABS KALI
+	* ./sherlock username
