@@ -65,7 +65,11 @@
 	
 ## WEBSITE OSINT
 
-### Extra Tools
+### Extra Tools Using GO
+*Prepare GO environment
+	* export GOPATH=$HOME/go 
+	* export GOROOT=/usr/lib/go
+	* export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 * Subfinder - https://github.com/projectdiscovery/subfinder
 	* go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 	* subfinder -d target.com
