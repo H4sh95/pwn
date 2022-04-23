@@ -59,3 +59,14 @@
 * https://github.com/twintproject/twint
 * pip3 install --upgrade -e git+https://github.com/twintproject/twint.git@origin/master#egg=twint
 * pip3 install --upgrade aiohttp_socks
+* twint -u twitterUser
+* twint -s netcb
+* twint -u <username> -s <search term>
+	
+## WEBSITE OSINT
+
+* Subfinder - https://github.com/projectdiscovery/subfinder
+* Assetfinder - https://github.com/tomnomnom/assetfinder
+* httprobe - https://github.com/tomnomnom/httprobe
+* Amass - https://github.com/OWASP/Amass
+* GoWitness - https://github.com/sensepost/gowitness/wiki/Installation
