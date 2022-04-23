@@ -34,6 +34,9 @@
 
 ### whatsmyname
 * https://github.com/WebBreacher/WhatsMyName
-	* web_accounts_list_checker.py
+* web_accounts_list_checker.py
 	* python3 ./web_accounts_list_checker.py -u maxim
 * check_online_presence.py
+	* python3 check_online_presence.py -u maxim
+	
+
