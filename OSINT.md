@@ -103,6 +103,7 @@
 	* info
 	* options set SOURCE target.com
 	* run
+	* show hosts
 * Profiler - Account Recon
 	* marketplace search
 	* marketplace install profiler
@@ -110,6 +111,7 @@
 	* info
 	* options set SOURCE <username>
 	* run
+	* show profiles
 * google_sites_web - Site Recon
 	* marketplace search
 	* marketplace install google_sites_web
