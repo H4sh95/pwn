@@ -91,3 +91,29 @@
 3. amass enum -d tcm-sec.com
 4. cat tesla.txt | sort -u | httprobe -s -p https:443
 5. gowitness file -f ./alive.txt -P ./pics --no-http
+	
+## FRAMEWORKS
+### recon-ng
+
+* recon-ng
+* Hackertarget - Domain Recon
+	* marketplace search
+	* marketplace install hackertarget
+	* modules load hackertarget
+	* info
+	* options set SOURCE target.com
+	* run
+* Profiler - Account Recon
+	* marketplace search
+	* marketplace install profiler
+	* modules load profiler
+	* info
+	* options set SOURCE <username>
+	* run
+* google_sites_web - Site Recon
+	* marketplace search
+	* marketplace install google_sites_web
+	* modules load google_sites_web
+	* info
+	* options set SOURCE target.com
+	* run
